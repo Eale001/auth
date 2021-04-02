@@ -75,6 +75,8 @@ public class TbMenuServiceImpl extends ServiceImpl<TbMenuMapper, Menu> implement
             //2、通过角色查询菜单（默认取第一个角色）
             Wrapper queryRoleMenuObj = new QueryWrapper<>().eq("role_id", userRoles.get(0).getRoleId());
             List<RoleMenu> roleMenus = roleMenuService.list(queryRoleMenuObj);
+
+
             if(!CollectionUtils.isEmpty(roleMenus)){
                 Set<Long> menuIds = new HashSet<>();
                 for (RoleMenu roleMenu : roleMenus) {

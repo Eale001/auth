@@ -61,10 +61,10 @@ public class CheckPermissionsAspect {
                 String menuCode = annotation.value();
                 if (StringUtils.isNotBlank(menuCode)){
                     //通过用户ID、菜单编码查询是否有关联
-                    int count = menuMapper.selectAuthByUserIdAndMenuCode(userId, menuCode);
+                    /*int count = menuMapper.selectAuthByUserIdAndMenuCode(userId, menuCode);
                     if(count == 0){
                         throw new RuntimeException("接口无访问权限");
-                    }
+                    }*/
                 }
 
             }

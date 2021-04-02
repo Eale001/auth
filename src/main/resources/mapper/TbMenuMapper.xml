@@ -17,7 +17,7 @@
         <result column="is_delete" property="isDelete" />
     </resultMap>
     <select id="selectAuthByUserIdAndMenuCode" resultType="java.lang.Integer">
-        select count (*) from
+
 
     </select>
 
